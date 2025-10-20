@@ -2,6 +2,7 @@
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) throws InterruptedException {
         // create a scanner
         Scanner game = new Scanner(System.in);
@@ -69,6 +70,12 @@ public class Main {
             System.out.println("You close your locker and go to back into the employee lounge and exit through the door on the right side of the wall you are facing and enter a small hallway with a maintenance room on your left and the office in front of you.");
             Thread.sleep(2100);
             System.out.println("You see a tablet and interact with it, it turns on and you can see the camera system.");
+            Thread.sleep(1175);
+            System.out.println("You look at the cameras, especially the main stage and see all of the animatronics are on the stage.");
+            Thread.sleep(1500);
+            System.out.println("You put down the camera.");
+            Thread.sleep(1000);
+            System.out.println("Isaac: Jeez, it's so boring here.");
 
         } else if(gameStart.equalsIgnoreCase("n") || gameStart.equalsIgnoreCase("no")) {
             System.out.println("You haven't even played the game yet.");
