@@ -125,7 +125,7 @@ public class Main {
                             Thread.sleep(3000);
                             System.out.println("It doesn't budge.");
                             Thread.sleep(3000);
-                            System.out.println("Here are your options.\nparts & service");
+                            System.out.println("Here are your options.\nparts & service\nemployee lounge");
                             System.out.println("What will you go and do?: ");
 
                             firstChoice = game.nextLine();
