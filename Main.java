@@ -1,6 +1,5 @@
 // import stuff
 import java.util.Scanner;
-import java.util.List;
 import java.util.ArrayList;
 
 public class Main {
@@ -8,6 +7,10 @@ public class Main {
     public static void main(String[] args) throws InterruptedException {
         // create a scanner
         Scanner game = new Scanner(System.in);
+
+        // store the choices the user makes
+        ArrayList<String> choices = new ArrayList<>();
+
         // go to sleep for any amount of seconds
         Thread.sleep(500);
         System.out.println("\nHello player, welcome to Survive the Night.");
@@ -102,7 +105,27 @@ public class Main {
                             Thread.sleep(1000);
                             System.out.println("You walk back into parts & service, everything still normal and how it's supposed to be.");
                             Thread.sleep(3000);
-                            System.out.println("Here are your options.\nLoading dock\nKitchen hall\nMain stage\nDining hall");
+                            System.out.println("Here are your options.\nloading dock\nkitchen hall\nmain stage\ndining hall");
+                            System.out.println("What will you go and do?: ");
+
+                            firstChoice = game.nextLine();
+                        } else if(firstChoice.equalsIgnoreCase("employee lounge") || firstChoice.equalsIgnoreCase("employeelounge")) {
+                            Thread.sleep(1000);
+                            System.out.println("You enter into the employee lounge and see left over freddy's pizza boxes and open cabinets.");
+                            Thread.sleep(3000);
+                            System.out.println("The room is very messy, almost like your room back at your apartment.");
+                            Thread.sleep(3000);
+                            System.out.println("Here are your options.\nemployee locker room\noffice hall\nloading dock");
+                            System.out.println("What will you go and do?: ");
+
+                            firstChoice = game.nextLine();
+                        } else if(firstChoice.equalsIgnoreCase("side exit") || firstChoice.equalsIgnoreCase("sideexit")) {
+                            Thread.sleep(1000);
+                            System.out.println("You walk over to the side exit and try the door.");
+                            Thread.sleep(3000);
+                            System.out.println("It doesn't budge.");
+                            Thread.sleep(3000);
+                            System.out.println("Here are your options.\nparts & service");
                             System.out.println("What will you go and do?: ");
 
                             firstChoice = game.nextLine();
