@@ -97,7 +97,7 @@ public class Main {
                     Thread.sleep(3000);
                     System.out.println("You also see a fire axe cabinet that's locked, looks useful but it's behind a glass and a lock.");
                     Thread.sleep(3000);
-                    System.out.println("Here are your options.\nparts & service\nemployees lounge\nside exit");
+                    System.out.println("Here are your options.\nparts & service\nemployee lounge\nside exit");
                     System.out.println("What will you go and do?: ");
                     firstChoice = game.nextLine();
 
@@ -119,6 +119,28 @@ public class Main {
                             System.out.println("What will you go and do?: ");
 
                             firstChoice = game.nextLine();
+
+                            if(firstChoice.equalsIgnoreCase("employee locker room") || firstChoice.equalsIgnoreCase("employeelockerroom") || firstChoice.equalsIgnoreCase("employee lockerroom") || firstChoice.equalsIgnoreCase("employeeloocker room")) {
+                                Thread.sleep(1000);
+                                System.out.println("");
+                                Thread.sleep(3000);
+                                System.out.println("");
+                                Thread.sleep(3000);
+                                System.out.println("Here are your options.\nemployee lounge");
+                                System.out.println("What will you go and do?: ");
+
+                                firstChoice = game.nextLine();
+                            } else if(firstChoice.equalsIgnoreCase("office hall") || firstChoice.equalsIgnoreCase("officehall")) {
+                                Thread.sleep(1000);
+                                System.out.println("");
+                                Thread.sleep(3000);
+                                System.out.println("");
+                                Thread.sleep(3000);
+                                System.out.println("Here are your options.\nsewer maintenance\noffice\nemployee lounge");
+                                System.out.println("What will you go and do?: ");
+
+                                firstChoice = game.nextLine();
+                            }
                         } else if(firstChoice.equalsIgnoreCase("side exit") || firstChoice.equalsIgnoreCase("sideexit")) {
                             Thread.sleep(1000);
                             System.out.println("You walk over to the side exit and try the door.");
@@ -173,6 +195,26 @@ public class Main {
                         } else if(firstChoice.equalsIgnoreCase("employee bathroom") || firstChoice.equalsIgnoreCase("employeebathroom")) {
                             Thread.sleep(1000);
                             System.out.println("You walk into the employee bathroom and see that it's semi-dirty but overall clean none the less.");
+                            Thread.sleep(3000);
+                            System.out.println("Here are your options.\nkitchen");
+                            System.out.println("What will you go and do?: ");
+
+                            firstChoice = game.nextLine();
+
+                            if(firstChoice.equalsIgnoreCase("kitchen")) {
+                                Thread.sleep(1000);
+                                System.out.println("You walk back into the kitchen.");
+                                Thread.sleep(3000);
+                                System.out.println("Here are your options.\nmanager hall\nfreezer\nemployee bathroom\nsupply closet\nkitchen hall");
+                                System.out.println("What will you go and do?: ");
+
+                                firstChoice = game.nextLine();
+                            }
+                        } else if(firstChoice.equalsIgnoreCase("supply closet") || firstChoice.equalsIgnoreCase("supplycloset")) {
+                            Thread.sleep(1000);
+                            System.out.println("You walk up to the supply closet door, open it and go into the closet.");
+                            Thread.sleep(3000);
+                            System.out.println("You walk into the supply closet and see that there are all sorts of cleaning equipment.");
                             Thread.sleep(3000);
                             System.out.println("Here are your options.\nkitchen");
                             System.out.println("What will you go and do?: ");
