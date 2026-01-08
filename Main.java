@@ -8,8 +8,9 @@ public class Main {
         // create a scanner
         Scanner game = new Scanner(System.in);
 
-        // store the choices the user makes
-        ArrayList<String> choices = new ArrayList<>();
+        // store the consequences and items the user makes and or picks up
+        ArrayList<String> Inventory = new ArrayList<>();
+        ArrayList<String> Consequences = new ArrayList<>();
 
         // go to sleep for any amount of seconds
         Thread.sleep(500);
@@ -28,205 +29,267 @@ public class Main {
             Thread.sleep(1000);
             // Night 1
             System.out.println("\nYou wake up in your somewhat trashy apartment room, there being basically cardboard boxes on the ground, a left over Freddy Fazbear pizza box on a table, and generally just trash everywhere.");
-            Thread.sleep(3000);
+            Thread.sleep(1000);
             System.out.println("You walk around feeling groggy and terrible, just like any other day.");
-            Thread.sleep(3000);
+            Thread.sleep(1000);
             System.out.println("There is a knock on the door and through the door flap a newspaper comes through and lands on the floor.");
-            Thread.sleep(3000);
+            Thread.sleep(1000);
             System.out.println("You walk over to the front door, bend over and pick up the newspaper and you start flipping through pages.");
-            Thread.sleep(3000);
+            Thread.sleep(1000);
             System.out.println("As you are flipping through, one thing catches your eye.");
-            Thread.sleep(3000);
+            Thread.sleep(1000);
             System.out.println("It's a help wanted section and Freddy Fazbear's is in the section looking for a nightguard.");
-            Thread.sleep(3000);
+            Thread.sleep(1000);
             System.out.println("You scoff and shake your head, thought's lingering in your head about if you should take this job opportunity.");
-            Thread.sleep(3000);
+            Thread.sleep(1000);
             System.out.println("You finally decide to try and take the job, you go and get changed and head out to Freddy's.");
-            Thread.sleep(3000);
+            Thread.sleep(1000);
             System.out.println("After some time you get off of the city bus in a somewhat less building populated area.");
-            Thread.sleep(3000);
+            Thread.sleep(1000);
             System.out.println("You walk over to Freddy's and enter through the doors, you see a man, dressed in professional clothing, and you step up to the front desk.");
-            Thread.sleep(3000);
+            Thread.sleep(1000);
             System.out.println("You clear your throat.");
-            Thread.sleep(3000);
+            Thread.sleep(1000);
             System.out.println("\nIsaac: Hello.., Uhm I would like to apply for the nightguard position.");
-            Thread.sleep(3000);
+            Thread.sleep(1000);
             System.out.println("\nThe man looks at you.");
-            Thread.sleep(3000);
+            Thread.sleep(1000);
             System.out.println("\nReceptionist: You want to what now?");
-            Thread.sleep(3000);
+            Thread.sleep(1000);
             System.out.println("\nThe receptionist says as saying he didn't quite hear you.");
-            Thread.sleep(3000);
+            Thread.sleep(1000);
             System.out.println("You speak a bit more clearly.");
-            Thread.sleep(3000);
+            Thread.sleep(1000);
             System.out.println("\nIsaac: I would like to apply for the nightguard position.");
-            Thread.sleep(3000);
+            Thread.sleep(1000);
             System.out.println("\nThe receptionist looks a bit shocked, he didn't expect for someone to apply so soon.");
-            Thread.sleep(3000);
+            Thread.sleep(1000);
             System.out.println("\nReceptionist: Well alright then, let me go and get the papers.");
-            Thread.sleep(3000);
+            Thread.sleep(1000);
             System.out.println("\nThe receptionist walks off and comes back with a paper for you to sign.");
-            Thread.sleep(3000);
+            Thread.sleep(1000);
             System.out.println("\nReceptionist: Sign here, and here.");
-            Thread.sleep(3000);
+            Thread.sleep(1000);
             System.out.println("\nThe receptionist says as he points at the designated spots for you to sign.");
-            Thread.sleep(3000);
+            Thread.sleep(1000);
             System.out.println("You sign and fast forward you are to start tonight, so you go to the back of the pizzeria and into the employee only locker room and get changed.");
-            Thread.sleep(3000);
+            Thread.sleep(1000);
             System.out.println("You close your locker and go to back into the employee lounge and exit through the door on the right side of the wall you are facing and enter a small hallway with a maintenance room on your left and the office \nin front of you.");
-            Thread.sleep(3000);
+            Thread.sleep(1000);
             System.out.println("You see a tablet and interact with it, it turns on and you can see the camera system.");
-            Thread.sleep(3000);
+            Thread.sleep(1000);
             System.out.println("You look at the cameras, especially the main stage and see all of the animatronics are on the stage.");
-            Thread.sleep(3000);
+            Thread.sleep(1000);
             System.out.println("You put down the camera.");
-            Thread.sleep(3000);
+            Thread.sleep(1000);
             System.out.println("Isaac: Jeez, it's so boring here.");
-            Thread.sleep(3000);
+            Thread.sleep(1000);
             System.out.println("You get out of your chair and enter parts & service.");
-            Thread.sleep(3000);
-            System.out.println("Here are your options.\nLoading dock\nKitchen hall\nMain stage\nDining hall");
-            System.out.println("What will you go and do?: ");
+            Thread.sleep(1000);
+            System.out.println("\nHere are your options.\nloading dock\nkitchen hall\nmain stage\ndining hall");
+            System.out.println("\nWhat will you go and do?: ");
             String firstChoice = game.nextLine();
 
             boolean condition = true;
             loopOne: while(condition) {
-                if(firstChoice.equalsIgnoreCase("loading dock") || firstChoice.equalsIgnoreCase("loadingdock")) {
+                if (firstChoice.equalsIgnoreCase("loading dock") || firstChoice.equalsIgnoreCase("loadingdock")) {
                     Thread.sleep(1000);
-                    System.out.println("You walk into the Loading dock and see all sort of crates ranging from fazbear containers to small boxes.");
+                    System.out.println("\nYou walk into the Loading dock and see all sort of crates ranging from fazbear containers to small boxes.");
                     Thread.sleep(3000);
                     System.out.println("You also see a fire axe cabinet that's locked, looks useful but it's behind a glass and a lock.");
                     Thread.sleep(3000);
-                    System.out.println("Here are your options.\nparts & service\nemployee lounge\nside exit");
-                    System.out.println("What will you go and do?: ");
+                    System.out.println("\nHere are your options.\nparts & service\nemployee lounge\nside exit");
+                    System.out.println("\nWhat will you go and do?: ");
                     firstChoice = game.nextLine();
+                    // new room
+                    if (firstChoice.equalsIgnoreCase("parts and service") || firstChoice.equalsIgnoreCase("partsandservice") || firstChoice.equalsIgnoreCase("parts & service") || firstChoice.equalsIgnoreCase("parts&service")) {
+                        Thread.sleep(1000);
+                        System.out.println("\nYou walk back into parts & service, everything still normal and how it's supposed to be.");
+                        Thread.sleep(3000);
+                        System.out.println("\nHere are your options.\nloading dock\nkitchen hall\nmain stage\ndining hall");
+                        System.out.println("\nWhat will you go and do?: ");
 
-                        if (firstChoice.equalsIgnoreCase("parts and service") || firstChoice.equalsIgnoreCase("partsandservice") || firstChoice.equalsIgnoreCase("parts & service") || firstChoice.equalsIgnoreCase("parts&service")){
+                        firstChoice = game.nextLine();
+                    } else if (firstChoice.equalsIgnoreCase("employee lounge") || firstChoice.equalsIgnoreCase("employeelounge")) {
+                        Thread.sleep(1000);
+                        System.out.println("\nYou enter into the employee lounge and see left over freddy's pizza boxes and open cabinets.");
+                        Thread.sleep(3000);
+                        System.out.println("The room is very messy, almost like your room back at your apartment.");
+                        Thread.sleep(3000);
+                        System.out.println("\nHere are your options.\nemployee locker room\noffice hall\nloading dock");
+                        System.out.println("\nWhat will you go and do?: ");
+
+                        firstChoice = game.nextLine();
+                        // new room
+                        if (firstChoice.equalsIgnoreCase("employee locker room") || firstChoice.equalsIgnoreCase("employeelockerroom") || firstChoice.equalsIgnoreCase("employee lockerroom") || firstChoice.equalsIgnoreCase("employeelocker room")) {
                             Thread.sleep(1000);
-                            System.out.println("You walk back into parts & service, everything still normal and how it's supposed to be.");
+                            System.out.println("\nYou enter the locker room and see some lockers are left ajar and spare fazbear work outfits are left lying in them");
                             Thread.sleep(3000);
-                            System.out.println("Here are your options.\nloading dock\nkitchen hall\nmain stage\ndining hall");
-                            System.out.println("What will you go and do?: ");
+                            System.out.println("\nHere are your options.\nemployee lounge");
+                            System.out.println("\nWhat will you go and do?: ");
 
                             firstChoice = game.nextLine();
-                        } else if(firstChoice.equalsIgnoreCase("employee lounge") || firstChoice.equalsIgnoreCase("employeelounge")) {
+                        } else if (firstChoice.equalsIgnoreCase("office hall") || firstChoice.equalsIgnoreCase("officehall")) {
                             Thread.sleep(1000);
-                            System.out.println("You enter into the employee lounge and see left over freddy's pizza boxes and open cabinets.");
+                            System.out.println("\nYou enter the office hall.");
+                            Thread.sleep(3000);
+                            System.out.println("The hall is filled with some shelves and has a pin board with some fliers on them and a sign above the door on your left that says sewer maintenance.");
+                            Thread.sleep(3000);
+                            System.out.println("\nHere are your options.\nsewer maintenance\noffice\nemployee lounge");
+                            System.out.println("\nWhat will you go and do?: ");
+
+                            firstChoice = game.nextLine();
+                            // new room
+                            if (firstChoice.equalsIgnoreCase("sewer maintenance") || firstChoice.equalsIgnoreCase("sewermaintenance")) {
+                                Thread.sleep(1000);
+                                System.out.println("\nYou enter sewer maintenance and you see that there are a bunch of pipes that go to the bathrooms around that pizzeria.");
+                                Thread.sleep(3000);
+                                System.out.println("There are some terminals that help shut down the pipes as well.");
+                                Thread.sleep(3000);
+                                System.out.println("\nHere are your options.\noffice hall");
+                                System.out.println("\nWhat will you go and do?: ");
+
+                                firstChoice = game.nextLine();
+                            } else if (firstChoice.equalsIgnoreCase("office")) {
+                                Thread.sleep(1000);
+                                System.out.println("\nYou enter your office and see that nothing has really changed.");
+                                Thread.sleep(3000);
+                                System.out.println("Your office is still pretty messy with trash lying around.");
+                                Thread.sleep(3000);
+                                System.out.println("You see that you have a Freddy mask and a vent above your chair on the ceiling.");
+                                Thread.sleep(3000);
+                                System.out.println("The doorway for the hall to the employees lounge has a button to close a blast door so nothing can come through.");
+                                Thread.sleep(3000);
+                                System.out.println("\nHere are your options.\nparts and service\noffice hall");
+                                System.out.println("\nWhat will you go and do?: ");
+
+                                firstChoice = game.nextLine();
+
+                                if (firstChoice.equalsIgnoreCase("parts and service") || firstChoice.equalsIgnoreCase("partsandservice") || firstChoice.equalsIgnoreCase("parts & service") || firstChoice.equalsIgnoreCase("parts&service")) {
+                                    Thread.sleep(1000);
+                                    System.out.println("\nYou walk back into parts & service, everything still normal and how it's supposed to be.");
+                                    Thread.sleep(3000);
+                                    System.out.println("\nHere are your options.\nloading dock\nkitchen hall\nmain stage\ndining hall");
+                                    System.out.println("\nWhat will you go and do?: ");
+
+                                    firstChoice = game.nextLine();
+                                }
+                            }
+                        }
+                    } else if (firstChoice.equalsIgnoreCase("side exit") || firstChoice.equalsIgnoreCase("sideexit")) {
+                        Thread.sleep(1000);
+                        System.out.println("\nYou walk over to the side exit and try the door.");
+                        Thread.sleep(3000);
+                        System.out.println("It doesn't budge.");
+                        Thread.sleep(3000);
+                        System.out.println("\nHere are your options.\nparts & service\nemployee lounge");
+                        System.out.println("\nWhat will you go and do?: ");
+
+                        firstChoice = game.nextLine();
+                        if (firstChoice.equalsIgnoreCase("parts and service") || firstChoice.equalsIgnoreCase("partsandservice") || firstChoice.equalsIgnoreCase("parts & service") || firstChoice.equalsIgnoreCase("parts&service")) {
+                            Thread.sleep(1000);
+                            System.out.println("\nYou walk into parts & service, parts and tools, with boxes laying out in the open not put away.");
+                            Thread.sleep(3000);
+                            System.out.println("\nHere are your options.\nloading dock\nkitchen hall\nmain stage\ndining hall");
+                            System.out.println("\nWhat will you go and do?: ");
+
+                            firstChoice = game.nextLine();
+                        } else if (firstChoice.equalsIgnoreCase("employee lounge") || firstChoice.equalsIgnoreCase("employeelounge")) {
+                            Thread.sleep(1000);
+                            System.out.println("\nYou enter into the employee lounge and see left over freddy's pizza boxes and open cabinets.");
                             Thread.sleep(3000);
                             System.out.println("The room is very messy, almost like your room back at your apartment.");
                             Thread.sleep(3000);
-                            System.out.println("Here are your options.\nemployee locker room\noffice hall\nloading dock");
-                            System.out.println("What will you go and do?: ");
+                            System.out.println("\nHere are your options.\nemployee locker room\noffice hall\nloading dock");
+                            System.out.println("\nWhat will you go and do?: ");
 
                             firstChoice = game.nextLine();
 
-                            if(firstChoice.equalsIgnoreCase("employee locker room") || firstChoice.equalsIgnoreCase("employeelockerroom") || firstChoice.equalsIgnoreCase("employee lockerroom") || firstChoice.equalsIgnoreCase("employeeloocker room")) {
+                            if (firstChoice.equalsIgnoreCase("employee locker room") || firstChoice.equalsIgnoreCase("employeelockerroom") || firstChoice.equalsIgnoreCase("employee lockerroom") || firstChoice.equalsIgnoreCase("employeelocker room")) {
                                 Thread.sleep(1000);
-                                System.out.println("");
+                                System.out.println("\nYou enter the locker room and see some lockers are left ajar and spare fazbear work outfits are left lying in them");
                                 Thread.sleep(3000);
-                                System.out.println("");
-                                Thread.sleep(3000);
-                                System.out.println("Here are your options.\nemployee lounge");
-                                System.out.println("What will you go and do?: ");
-
-                                firstChoice = game.nextLine();
-                            } else if(firstChoice.equalsIgnoreCase("office hall") || firstChoice.equalsIgnoreCase("officehall")) {
-                                Thread.sleep(1000);
-                                System.out.println("");
-                                Thread.sleep(3000);
-                                System.out.println("");
-                                Thread.sleep(3000);
-                                System.out.println("Here are your options.\nsewer maintenance\noffice\nemployee lounge");
-                                System.out.println("What will you go and do?: ");
+                                System.out.println("\nHere are your options.\nemployee lounge");
+                                System.out.println("\nWhat will you go and do?: ");
 
                                 firstChoice = game.nextLine();
                             }
-                        } else if(firstChoice.equalsIgnoreCase("side exit") || firstChoice.equalsIgnoreCase("sideexit")) {
-                            Thread.sleep(1000);
-                            System.out.println("You walk over to the side exit and try the door.");
-                            Thread.sleep(3000);
-                            System.out.println("It doesn't budge.");
-                            Thread.sleep(3000);
-                            System.out.println("Here are your options.\nparts & service\nemployee lounge");
-                            System.out.println("What will you go and do?: ");
-
-                            firstChoice = game.nextLine();
                         }
+                    }
 
 
-
-                } else if(firstChoice.equalsIgnoreCase("kitchen hall") || firstChoice.equalsIgnoreCase("kitchenhall")) {
+                } else if (firstChoice.equalsIgnoreCase("kitchen hall") || firstChoice.equalsIgnoreCase("kitchenhall")) {
                     Thread.sleep(1000);
-                    System.out.println("You walk up to the door that goes into the kitchen hall, open the door and enter.");
+                    System.out.println("\nYou walk up to the door that goes into the kitchen hall, open the door and enter.");
                     Thread.sleep(3000);
                     System.out.println("You are can see the doors that lead to the kitchen and the hallway curving over to your left leading into the dining hall.");
                     Thread.sleep(3000);
-                    System.out.println("Here are your options.\nkitchen\ndining hall\nparts & service");
-                    System.out.println("What will you go and do?: ");
+                    System.out.println("\nHere are your options.\nkitchen\ndining hall\nparts & service");
+                    System.out.println("\nWhat will you go and do?: ");
                     firstChoice = game.nextLine();
-
-                    if (firstChoice.equalsIgnoreCase("parts and service") || firstChoice.equalsIgnoreCase("partsandservice") || firstChoice.equalsIgnoreCase("parts & service") || firstChoice.equalsIgnoreCase("parts&service")){
+                    // new room
+                    if (firstChoice.equalsIgnoreCase("parts and service") || firstChoice.equalsIgnoreCase("partsandservice") || firstChoice.equalsIgnoreCase("parts & service") || firstChoice.equalsIgnoreCase("parts&service")) {
                         Thread.sleep(1000);
-                        System.out.println("You walk back into parts & service, everything still normal and how it's supposed to be.");
+                        System.out.println("\nYou walk into parts & service, parts and tools, with boxes laying out in the open not put away.");
                         Thread.sleep(3000);
-                        System.out.println("Here are your options.\nLoading dock\nKitchen hall\nMain stage\nDining hall");
-                        System.out.println("What will you go and do?: ");
+                        System.out.println("\nHere are your options.\nLoading dock\nKitchen hall\nMain stage\nDining hall");
+                        System.out.println("\nWhat will you go and do?: ");
 
                         firstChoice = game.nextLine();
-                    } else if(firstChoice.equalsIgnoreCase("kitchen")) {
+                    } else if (firstChoice.equalsIgnoreCase("kitchen")) {
                         Thread.sleep(1000);
-                        System.out.println("You walk into the kitchen and see all types of assortment of pots and pans along side with kitchen utensils and quite a lot of dishes in the countless of sinks.");
+                        System.out.println("\nYou walk into the kitchen and see all types of assortment of pots and pans along side with kitchen utensils and quite a lot of dishes in the countless of sinks.");
                         Thread.sleep(3000);
-                        System.out.println("Here are your options.\nmanager hall\nfreezer\nemployee bathroom\nsupply closet\nkitchen hall");
-                        System.out.println("What will you go and do?: ");
+                        System.out.println("\nHere are your options.\nmanager hall\nfreezer\nemployee bathroom\nsupply closet\nkitchen hall");
+                        System.out.println("\nWhat will you go and do?: ");
 
                         firstChoice = game.nextLine();
-
-                        if(firstChoice.equalsIgnoreCase("freezer")) {
+                        // new room
+                        if (firstChoice.equalsIgnoreCase("freezer")) {
                             Thread.sleep(1000);
-                            System.out.println("You walk up to the freezer door and open it, a spine chilling rush of cold air brushes against your body.");
+                            System.out.println("\nYou walk up to the freezer door and open it, a spine chilling rush of cold air brushes against your body.");
                             Thread.sleep(3000);
                             System.out.println("You close the freezer door.");
                             Thread.sleep(3000);
-                            System.out.println("Here are your options.\nmanager hall\nemployee bathroom\nsupply closet\nkitchen hall");
-                            System.out.println("What will you go and do?: ");
+                            System.out.println("\nHere are your options.\nmanager hall\nemployee bathroom\nsupply closet\nkitchen hall");
+                            System.out.println("\nWhat will you go and do?: ");
 
                             firstChoice = game.nextLine();
-                        } else if(firstChoice.equalsIgnoreCase("employee bathroom") || firstChoice.equalsIgnoreCase("employeebathroom")) {
+                            // new room
+                        } else if (firstChoice.equalsIgnoreCase("employee bathroom") || firstChoice.equalsIgnoreCase("employeebathroom")) {
                             Thread.sleep(1000);
-                            System.out.println("You walk into the employee bathroom and see that it's semi-dirty but overall clean none the less.");
+                            System.out.println("\nYou walk into the employee bathroom and see that it's semi-dirty but overall clean none the less.");
                             Thread.sleep(3000);
-                            System.out.println("Here are your options.\nkitchen");
-                            System.out.println("What will you go and do?: ");
+                            System.out.println("\nHere are your options.\nkitchen");
+                            System.out.println("\nWhat will you go and do?: ");
 
                             firstChoice = game.nextLine();
-
-                            if(firstChoice.equalsIgnoreCase("kitchen")) {
+                            if (firstChoice.equalsIgnoreCase("kitchen")) {
                                 Thread.sleep(1000);
-                                System.out.println("You walk back into the kitchen.");
+                                System.out.println("\nYou walk back into the kitchen.");
                                 Thread.sleep(3000);
-                                System.out.println("Here are your options.\nmanager hall\nfreezer\nemployee bathroom\nsupply closet\nkitchen hall");
-                                System.out.println("What will you go and do?: ");
+                                System.out.println("\nHere are your options.\nmanager hall\nfreezer\nemployee bathroom\nsupply closet\nkitchen hall");
+                                System.out.println("\nWhat will you go and do?: ");
 
                                 firstChoice = game.nextLine();
+                                // new room
                             }
-                        } else if(firstChoice.equalsIgnoreCase("supply closet") || firstChoice.equalsIgnoreCase("supplycloset")) {
+                        } else if (firstChoice.equalsIgnoreCase("supply closet") || firstChoice.equalsIgnoreCase("supplycloset")) {
                             Thread.sleep(1000);
-                            System.out.println("You walk up to the supply closet door, open it and go into the closet.");
+                            System.out.println("\nYou walk up to the supply closet door, open it and go into the closet.");
                             Thread.sleep(3000);
                             System.out.println("You walk into the supply closet and see that there are all sorts of cleaning equipment.");
                             Thread.sleep(3000);
-                            System.out.println("Here are your options.\nkitchen");
-                            System.out.println("What will you go and do?: ");
+                            System.out.println("\nHere are your options.\nkitchen");
+                            System.out.println("\nWhat will you go and do?: ");
 
                             firstChoice = game.nextLine();
-
-                            if(firstChoice.equalsIgnoreCase("kitchen")) {
+                            if (firstChoice.equalsIgnoreCase("kitchen")) {
                                 Thread.sleep(1000);
-                                System.out.println("You walk back into the kitchen.");
+                                System.out.println("\nYou walk back into the kitchen.");
                                 Thread.sleep(3000);
-                                System.out.println("Here are your options.\nmanager hall\nfreezer\nemployee bathroom\nsupply closet\nkitchen hall");
-                                System.out.println("What will you go and do?: ");
+                                System.out.println("\nHere are your options.\nmanager hall\nfreezer\nemployee bathroom\nsupply closet\nkitchen hall");
+                                System.out.println("\nWhat will you go and do?: ");
 
                                 firstChoice = game.nextLine();
                             }
@@ -234,51 +297,70 @@ public class Main {
                     }
 
 
-
-                } else if(firstChoice.equalsIgnoreCase("main stage") || firstChoice.equalsIgnoreCase("mainstage")) {
+                    // new room
+                } else if (firstChoice.equalsIgnoreCase("main stage") || firstChoice.equalsIgnoreCase("mainstage")) {
                     Thread.sleep(1000);
-                    System.out.println("You walk onto the main stage and see the band, all of them deactivated and stuck frozen in the same poses from when the place was open during the day.");
+                    System.out.println("\nYou walk onto the main stage and see the band, all of them deactivated and stuck frozen in the same poses from when the place was open during the day.");
                     Thread.sleep(3000);
                     System.out.println("Beyond the band, you can see endless rows of tables and the prize counter at the end of those table directly lined up with the stage, facing it.");
                     Thread.sleep(3000);
-                    System.out.println("Here are your options.\nparts & service");
-                    System.out.println("What will you go and do?: ");
+                    System.out.println("\nHere are your options.\nparts & service");
+                    System.out.println("\nWhat will you go and do?: ");
                     firstChoice = game.nextLine();
-
-                    if (firstChoice.equalsIgnoreCase("parts and service") || firstChoice.equalsIgnoreCase("partsandservice") || firstChoice.equalsIgnoreCase("parts & service") || firstChoice.equalsIgnoreCase("parts&service")){
+                    if (firstChoice.equalsIgnoreCase("parts and service") || firstChoice.equalsIgnoreCase("partsandservice") || firstChoice.equalsIgnoreCase("parts & service") || firstChoice.equalsIgnoreCase("parts&service")) {
                         Thread.sleep(1000);
-                        System.out.println("You walk back into parts & service, everything still normal and how it's supposed to be.");
+                        System.out.println("\nYou walk back into parts & service, everything still normal and how it's supposed to be.");
                         Thread.sleep(3000);
-                        System.out.println("Here are your options.\nLoading dock\nKitchen hall\nMain stage\nDining hall");
-                        System.out.println("What will you go and do?: ");
+                        System.out.println("\nHere are your options.\nLoading dock\nKitchen hall\nMain stage\nDining hall");
+                        System.out.println("\nWhat will you go and do?: ");
 
                         firstChoice = game.nextLine();
                     }
 
 
-
-                } else if(firstChoice.equalsIgnoreCase("dining hall") || firstChoice.equalsIgnoreCase("dininghall")) {
+                    // new room
+                } else if (firstChoice.equalsIgnoreCase("dining hall") || firstChoice.equalsIgnoreCase("dininghall")) {
                     Thread.sleep(1000);
-                    System.out.println("You walk into the dining hall and the stage is right beside you and you can see all of the tables vacant and in a nice row ");
+                    System.out.println("\nYou walk into the dining hall and the stage is right beside you and you can see all of the tables vacant and in a nice row ");
                     Thread.sleep(3000);
-                    System.out.println("Here are your options.\nparts & service\n prize corner\nparty room 1\nparty room 2\nparty room 3\nparty room 4\nwest bathroom hall\neast bathroom hall");
-                    System.out.println("What will you go and do?: ");
-                    firstChoice = game.nextLine();
+                    System.out.println("\nHere are your options.\nparts & service\nprize corner\nparty room 1\nparty room 2\nparty room 3\nparty room 4\nwest bathroom hall\neast bathroom hall");
+                    System.out.println("\nWhat will you go and do?: ");
 
-                    if (firstChoice.equalsIgnoreCase("parts and service") || firstChoice.equalsIgnoreCase("partsandservice") || firstChoice.equalsIgnoreCase("parts & service") || firstChoice.equalsIgnoreCase("parts&service")){
+                    firstChoice = game.nextLine();
+                    if (firstChoice.equalsIgnoreCase("parts and service") || firstChoice.equalsIgnoreCase("partsandservice") || firstChoice.equalsIgnoreCase("parts & service") || firstChoice.equalsIgnoreCase("parts&service")) {
                         Thread.sleep(1000);
-                        System.out.println("You walk back into parts & service, everything still normal and how it's supposed to be.");
+                        System.out.println("\nYou walk back into parts & service, everything still normal and how it's supposed to be.");
                         Thread.sleep(3000);
-                        System.out.println("Here are your options.\nLoading dock\nKitchen hall\nMain stage\nDining hall");
-                        System.out.println("What will you go and do?: ");
+                        System.out.println("\nHere are your options.\nLoading dock\nKitchen hall\nMain stage\nDining hall");
+                        System.out.println("\nWhat will you go and do?: ");
 
                         firstChoice = game.nextLine();
-                    }
+                    } else if (firstChoice.equalsIgnoreCase("prize corner") || firstChoice.equalsIgnoreCase("prizecorner")) {
+                        Thread.sleep(1000);
 
+                    } else if (firstChoice.equalsIgnoreCase("party room 1") || firstChoice.equalsIgnoreCase("partyroom1") || firstChoice.equalsIgnoreCase("partyroom 1") || firstChoice.equalsIgnoreCase("party room1") ||firstChoice.equalsIgnoreCase("party room one") || firstChoice.equalsIgnoreCase("partyroomone") || firstChoice.equalsIgnoreCase("partyroom one") || firstChoice.equalsIgnoreCase("party roomone")) {
+                        Thread.sleep(1000);
+
+                    } else if (firstChoice.equalsIgnoreCase("party room 2") || firstChoice.equalsIgnoreCase("partyroom2") || firstChoice.equalsIgnoreCase("partyroom 2") || firstChoice.equalsIgnoreCase("party room2") ||firstChoice.equalsIgnoreCase("party room two") || firstChoice.equalsIgnoreCase("partyroomtwo") || firstChoice.equalsIgnoreCase("partyroom two") || firstChoice.equalsIgnoreCase("party roomtwo")) {
+                        Thread.sleep(1000);
+
+                    } else if (firstChoice.equalsIgnoreCase("party room 3") || firstChoice.equalsIgnoreCase("partyroom3") || firstChoice.equalsIgnoreCase("partyroom 3") || firstChoice.equalsIgnoreCase("party room3") ||firstChoice.equalsIgnoreCase("party room three") || firstChoice.equalsIgnoreCase("partyroomthree") || firstChoice.equalsIgnoreCase("partyroom three") || firstChoice.equalsIgnoreCase("party roomthree")) {
+                        Thread.sleep(1000);
+
+                    } else if (firstChoice.equalsIgnoreCase("party room 4") || firstChoice.equalsIgnoreCase("partyroom4") || firstChoice.equalsIgnoreCase("partyroom 4") || firstChoice.equalsIgnoreCase("party room4") ||firstChoice.equalsIgnoreCase("party room four") || firstChoice.equalsIgnoreCase("partyroomfour") || firstChoice.equalsIgnoreCase("partyroom four") || firstChoice.equalsIgnoreCase("party roomfour")) {
+                        Thread.sleep(1000);
+
+                    } else if (firstChoice.equalsIgnoreCase("west bathroom hall") || firstChoice.equalsIgnoreCase("westbathroomhall") || firstChoice.equalsIgnoreCase("westbathroom hall") || firstChoice.equalsIgnoreCase("west bathroomhall")) {
+                        Thread.sleep(1000);
+
+                    } else if (firstChoice.equalsIgnoreCase("east bathroom hall") || firstChoice.equalsIgnoreCase("eastbathroomhall") || firstChoice.equalsIgnoreCase("eastbathroom hall") || firstChoice.equalsIgnoreCase("east bathroomhall")) {
+                        Thread.sleep(1000);
+
+                    }
 
 
                 } else {
-                    System.out.println("Sorry but this isn't a choice.");
+                    System.out.println("\nSorry but this isn't a choice.");
                     return;
                 }
             }
@@ -286,14 +368,14 @@ public class Main {
 
         } else if(gameStart.equalsIgnoreCase("n") || gameStart.equalsIgnoreCase("no")) {
             Thread.sleep(1000);
-            System.out.println("You haven't even played the game yet.");
+            System.out.println("\nYou haven't even played the game yet.");
             Thread.sleep(1000);
             System.out.println("Oh well, goodbye I guess.");
             return;
 
         } else {
             Thread.sleep(1000);
-            System.out.println("You didn't even put a valid option.");
+            System.out.println("\nYou didn't even put a valid option.");
             return;
         }
     }
